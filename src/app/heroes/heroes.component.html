@@ -1,0 +1,11 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <!-- *ngFor > 이게 바로 for문 Directive -->
+  <!-- (click) > 이게 바로 Event-binding          onSelect 함수 -->
+  <!-- [class.selected] > 이게 바로 property-binding -->
+  <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)" >
+    <span class="badge">{{hero.id}}</span>{{hero.name}}
+  </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
