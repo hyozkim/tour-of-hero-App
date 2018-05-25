@@ -1,4 +1,4 @@
-<!-- selectedHero 가 존재할때만 선택된 hero의 상세정보를 출력하기 ngIf -->
+<!-- selectedHero 가 존재할때 선택된 hero의 상세 정보를 출력하기 ngIf -->
 <div *ngIf="hero">
   <h2>{{hero.name | titlecase}} Details</h2>
   <div>
@@ -11,5 +11,6 @@
     <!-- ngModel은 event, property 함께 처리 -->
     <label>name:<input type="text" placeholder="name" [(ngModel)]="hero.name" /></label>
   </div>
-
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
 </div>
