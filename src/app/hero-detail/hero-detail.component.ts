@@ -35,7 +35,6 @@ export class HeroDetailComponent implements OnInit {
   }
 
 
-
   getHero(): void {
     // stirng -> number 로 변환하기 위해서 Number() 함수 사용
     const id = Number(this.route.snapshot.paramMap.get('id'));
